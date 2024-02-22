@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    each personaje in personajes 
+        ul 
+            a.li(href=`${personaje.id}`) #{personaje.name}
+    
+    
