@@ -5,7 +5,6 @@ const Personaje = require('../models/personaje');
 router.get('/todos', async (req, res) => {
   try {
     const personajes = await Personaje.find({}, 'id name gender image url created');
-    console.log(gender)
     console.log(personajes);
     res.render('personajes', { title: 'Express', personajes: personajes });
   } catch (error) {
